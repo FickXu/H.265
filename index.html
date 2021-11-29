@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<style>
+  *
+  {
+    margin: 0;
+    padding: 0;
+  }
+  .fixed-bottom {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+  }
+</style>
+<body>
+
+  <div class="fixed-bottom">
+    <p>已解码(kb)：<span id="yjm"></span>kb  <span id="yjmM"></span>M</p>
+    <p>当前解码大小(kb)：<span id="dqdx"></span></p>
+    <p>解码次数：<span id="dqcs"></span></p>
+    <p>码率(kbps)：<span id="ml"></span></p>
+    <p>解码耗时(s)：<span id="jmhs"></span></p>
+  </div>
+    <div style="margin: 20px;">
+      H265:
+        <input type="file" onchange="handleVideoFiles(this.files)">
+    </div>
+
+  <div style="margin-top: 10px">
+    <canvas id="playCanvas"  width="560px" height="360px"></canvas>
+  </div>
+  <!-- <button onclick="fileLoad()">获取文件</button> -->
+  <script src="lib/libffmpeg_265.js"></script>
+  <script src="lib/video.js"></script>
+  <script src="lib/webgl.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</body>
+</html>
