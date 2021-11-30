@@ -15,6 +15,7 @@
 <body>
 
   <div class="fixed-bottom">
+    <p>解码文件：<span id="jmwj"></span></p>
     <p>已解码(kb)：<span id="yjm"></span>kb  <span id="yjmM"></span>M</p>
     <p>当前解码大小(kb)：<span id="dqjmdx"></span></p>
     <p>当前解码耗时(ms)：<span id="dqjmhs"></span></p>
@@ -22,15 +23,18 @@
     <p>码率(kbps)：<span id="ml"></span></p>
     <p>总解码耗时(s)：<span id="jmhs"></span></p>
   </div>
-    <div style="margin: 20px;">
+    <!-- <div style="margin: 20px;">
       H265:
         <input type="file" onchange="handleVideoFiles(this.files)">
-    </div>
+    </div> -->
 
+  <button style="width: 100px;height: 44px;" onclick="fileLoad(this)">10s+.265</button>
+  <button style="width: 100px;height: 44px;" onclick="fileLoad(this)">20s+.h265</button>
+  <button style="width: 100px;height: 44px;" onclick="fileLoad(this)">2min+.h265</button>
+  <button style="width: 100px;height: 44px;" onclick="fileLoad(this)">10min+.h264</button>
   <div style="margin-top: 10px">
-    <canvas id="playCanvas"  width="560px" height="360px"></canvas>
+    <canvas id="playCanvas"  width="980px" height="360px"></canvas>
   </div>
-  <!-- <button onclick="fileLoad()">获取文件</button> -->
   <script src="lib/libffmpeg_265.js"></script>
   <script src="lib/video.js"></script>
   <script src="lib/webgl.js"></script>
